@@ -36,13 +36,18 @@ public class Roster
 				writeStu.writeObject(new StuName(firstName, lastName));
 			}
 			writeStu.close();
-			System.out.print("Dat has been written to the file.");
+			System.out.println("Data has been written to the file.");
 			
 			
 			//Read and display student objects
+			FileInputStream in = new FileInputStream(stuNameFile);
+			ObjectInputStream readStuName = new ObjectInputStream(in);
 			
-			
-			
+			for(int i = 0; i < numStudents; i++)
+			{
+				System.out.println((StuName)readStuName.readObject());
+			}
+			readStuName.close();
 		}
 		catch(FileNotFoundException e)
 		{
