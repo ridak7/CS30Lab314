@@ -1,3 +1,4 @@
+package LinkedList;
 
 public class LinkedList implements Stats
 {
@@ -63,13 +64,16 @@ public class LinkedList implements Stats
 	}
 	
 	
-	public int sum() {
+	public int sum() 
+	{
 		NodeLL current = head;
 		int total = 0;
 		
-		if (current != null) {
+		if (current != null) 
+		{
 			total += current.getdata();
-			while (current.getNext() != null) {
+			while (current.getNext() != null) 
+			{
 				current = current.getNext();
 				total += current.getdata();
 			}
@@ -78,15 +82,19 @@ public class LinkedList implements Stats
 	}
 	
 	
-	public int min() {
+	public int min() 
+	{
 		NodeLL current = head;
 		int minValue = 0;
 		
-		if (current != null) {
+		if (current != null) 
+		{
 			minValue = current.getdata();
-			while (current.getNext() != null) {
+			while (current.getNext() != null) 
+			{
 				current = current.getNext();
-				if (current.getdata() < minValue) {
+				if (current.getdata() < minValue) 
+				{
 					minValue = current.getdata();
 				}
 			}
@@ -95,15 +103,19 @@ public class LinkedList implements Stats
 	}
 	
 	
-	public int max() {
+	public int max() 
+	{
 		NodeLL current = head;
 		int maxValue = 0;
 		
-		if (current != null) {
+		if (current != null) 
+		{
 			maxValue = current.getdata();
-			while (current.getNext() != null) {
+			while (current.getNext() != null) 
+			{
 				current = current.getNext();
-				if (current.getdata() > maxValue) {
+				if (current.getdata() > maxValue) 
+				{
 					maxValue = current.getdata();
 				}
 			}
